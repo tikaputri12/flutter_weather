@@ -1,8 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
 import 'package:open_meteo_api/open_meteo_api.dart';
-import 'package:open_meteo_api/src/models/location.dart';
-import 'package:open_meteo_api/src/models/weather.dart';
 import 'package:test/test.dart';
 
 class MockHttpClient extends Mock implements http.Client {}
