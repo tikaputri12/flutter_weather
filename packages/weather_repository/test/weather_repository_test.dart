@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // ignore_for_file: prefer_const_constructors
 import 'package:mocktail/mocktail.dart';
 import "package:open_meteo_api/open_meteo_api.dart" as open_meteo_api;
@@ -104,7 +103,9 @@ void main() {
             longitude: any(named: 'longitude'),
           ),
         ).thenAnswer((_) async => weather);
+
         final actual = await weatherRepository.getWeather(city);
+
         expect(
           actual,
           Weather(
@@ -132,7 +133,9 @@ void main() {
             longitude: any(named: 'longitude'),
           ),
         ).thenAnswer((_) async => weather);
+
         final actual = await weatherRepository.getWeather(city);
+
         expect(
           actual,
           Weather(
@@ -160,7 +163,9 @@ void main() {
             longitude: any(named: 'longitude'),
           ),
         ).thenAnswer((_) async => weather);
+
         final actual = await weatherRepository.getWeather(city);
+
         expect(
           actual,
           Weather(
@@ -188,7 +193,9 @@ void main() {
             longitude: any(named: 'longitude'),
           ),
         ).thenAnswer((_) async => weather);
+
         final actual = await weatherRepository.getWeather(city);
+
         expect(
           actual,
           Weather(
@@ -216,7 +223,9 @@ void main() {
             longitude: any(named: 'longitude'),
           ),
         ).thenAnswer((_) async => weather);
+
         final actual = await weatherRepository.getWeather(city);
+
         expect(
           actual,
           Weather(
@@ -234,17 +243,5 @@ void main() {
         verify(weatherApiClient.close).called(1);
       });
     });
-=======
-import 'package:flutter_test/flutter_test.dart';
-
-import 'package:weather_repository/weather_repository.dart';
-
-void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
->>>>>>> f9371ca (Fix open_meteo_api package)
   });
 }
