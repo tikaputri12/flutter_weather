@@ -5,7 +5,7 @@ void main() {
   group('Location', () {
     group('fromJson', () {
       test('returns correct Location object', () {
-        expect(
+        expect( 
           Location.fromJson(
             <String, dynamic>{
               'id': 4887398,
