@@ -5,7 +5,7 @@ import 'package:test/test.dart';
 import 'package:weather_repository/weather_repository.dart';
 
 class MockOpenMeteoApiClient extends Mock
-    implements open_meteo_api.OpenMeteoApiClient {}
+implements open_meteo_api.OpenMeteoApiClient {}
 
 class MockLocation extends Mock implements open_meteo_api.Location {}
 
