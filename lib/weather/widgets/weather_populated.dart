@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather/weather/weather.dart';
-import 'package:weather_repository/weather_repository.dart';
+import 'package:flutter_weather/weather/models/weather.dart';
+import 'package:weather_repository/weather_repository.dart'
+    hide Weather;
 
 class WeatherPopulated extends StatelessWidget {
   const WeatherPopulated({
@@ -120,16 +121,19 @@ extension on Color {
       1 <= percent && percent <= 100,
       'percentage must be between 1 and 100',
     );
+
     final p = percent / 100;
-    final alpha = a.round();
-    final red = r.round();
-    final green = g.round();
-    final blue = b.round();
+
+    final alphaValue = alpha;
+    final redValue = red;
+    final greenValue = green;
+    final blueValue = blue;
+
     return Color.fromARGB(
-      alpha,
-      red + ((255 - red) * p).round(),
-      green + ((255 - green) * p).round(),
-      blue + ((255 - blue) * p).round(),
+      alphaValue,
+      redValue + ((255 - redValue) * p).round(),
+      greenValue + ((255 - greenValue) * p).round(),
+      blueValue + ((255 - blueValue) * p).round(),
     );
   }
 }
