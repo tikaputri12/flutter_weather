@@ -41,9 +41,15 @@ class _SearchPageState extends State<SearchPage> {
 
                   Navigator.of(context).pop(city);
                 },
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'City',
                   hintText: 'Chicago',
+                  suffixIcon: IconButton(
+                    icon: const Icon(Icons.clear),
+                    onPressed: () {
+                      _textController.clear();
+                    },
+                  ),
                 ),
               ),
             ),
