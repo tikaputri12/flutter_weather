@@ -16,11 +16,11 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
 
     Timer(const Duration(seconds: 3), () {
+      if (!mounted) return;
+
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-          builder: (_) => const WeatherPage(),
-        ),
+        MaterialPageRoute(builder: (_) => const WeatherPage()),
       );
     });
   }
@@ -35,11 +35,7 @@ class _SplashPageState extends State<SplashPage> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFF1E3A8A),
-              Color(0xFF2563EB),
-              Color(0xFF38BDF8),
-            ],
+            colors: [Color(0xFF1E3A8A), Color(0xFF2563EB), Color(0xFF38BDF8)],
           ),
         ),
 
@@ -52,11 +48,7 @@ class _SplashPageState extends State<SplashPage> {
                 color: Colors.white.withOpacity(0.2),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: const Icon(
-                Icons.cloud,
-                size: 100,
-                color: Colors.white,
-              ),
+              child: const Icon(Icons.cloud, size: 100, color: Colors.white),
             ),
 
             const SizedBox(height: 30),
@@ -83,9 +75,7 @@ class _SplashPageState extends State<SplashPage> {
 
             const SizedBox(height: 50),
 
-            const CircularProgressIndicator(
-              color: Colors.white,
-            ),
+            const CircularProgressIndicator(color: Colors.white),
           ],
         ),
       ),
