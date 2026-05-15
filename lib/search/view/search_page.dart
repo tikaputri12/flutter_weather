@@ -33,6 +33,14 @@ class _SearchPageState extends State<SearchPage> {
               padding: const EdgeInsets.all(8),
               child: TextField(
                 controller: _textController,
+                textInputAction: TextInputAction.search,
+                onSubmitted: (value) {
+                  final city = value.trim();
+
+                  if (city.isEmpty) return;
+
+                  Navigator.of(context).pop(city);
+                },
                 decoration: const InputDecoration(
                   labelText: 'City',
                   hintText: 'Chicago',
