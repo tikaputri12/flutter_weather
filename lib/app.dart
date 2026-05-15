@@ -35,6 +35,7 @@ class WeatherAppView extends StatelessWidget {
 );
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.light(seedColor),
       home: const SplashPage(),
     );
